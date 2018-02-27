@@ -5,22 +5,27 @@
     <body>
         <div class="container">
             <header>
-                <h1>JSON to TYPESCRIPT</h1>
+                <div class="header-container">
+                    <div class="header-logo">
+                        <h1 class="header-title">JSON to TYPESCRIPT</h1>
+                    </div>
+                </div>
             </header>
             <section>
                 <div class="textarea-container">
-                    <h2>JSON</h2>
+                    <h2 class="label-textarea">JSON</h2>
                     <textarea id="input-json"></textarea>
                 </div>
                 <div class="textarea-container">
                     <div class="textarea-header-container">
-                        <h2>TYPESCRIPT</h2>
-                        <button class="clipborad">COPY</button>
+                        <h2 class="label-textarea">TYPESCRIPT</h2>
+                        <!-- <button class="clipborad">COPY</button> -->
                     </div>
                     <textarea readonly="readonly" id="input-ts"></textarea>
                 </div>
             </section>
             <footer>
+                <!-- <a class="footer-by" href="#">by Daniel Lima</a> -->
                 <div class="footer-container">
                     <button class="btn-submit" onclick="transform();">Process</button>
                 </div>
