@@ -1,0 +1,90 @@
+body, html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #2980b9;
+}
+
+h1,h2,h3,p, button{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    flex-grow: 1;
+    height: 70px;
+    background: #fff;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+section{
+    height: calc(100% - 20px);
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
+.textarea-container{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+}
+
+.textarea-header-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 {
+    color: #fff
+}
+
+.clipborad{
+}
+
+ footer{
+    height: 50px;
+    display: flex;
+    width: 100%;
+    background: #fff;
+    align-items: center;
+}
+
+.footer-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.btn-submit{
+    width: 200px;
+    height: 35px;
+    background: #2980b9;
+    color: #fff;
+    border: #fff 1px solid;
+    border-radius: 5px;
+}
+
+textarea {
+    flex-grow: 1;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) 
+{
+    section{
+        flex-direction: column;
+    }
+}
