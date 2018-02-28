@@ -106,11 +106,11 @@
         function mapper(object, nameAttr){
             let str = setInitialInterface(object, nameAttr);
             for(var propertyName in object) { 
-               let name = propertyName;
-               let value = object[name];
+                let name = propertyName;
+                let value = object[name];
                 let type = getType(value, name);
 
-               str += `     ${name}${type.optional? '?' : ''}: ${type.type};\n`
+                str += `     ${name}${type.optional? '?' : ''}: ${type.type};\n`
             }
             str += setEndInterface(object);
             return str;
