@@ -27,14 +27,27 @@ header{
 
 .header-logo{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     height: 100%;
+}
+
+.header-logo > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
 }
 
 .header-title{
     color: #fff;
     font-size: 30px;
+}
+
+.header-subtitle{
+    color: #B2DFDB;
+    font-size: 15px;
 }
 
 .container{
