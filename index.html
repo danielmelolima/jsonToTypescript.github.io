@@ -32,7 +32,7 @@
                             <button title="Clear" onclick="clearInput()" class="btn-action clipborad"><i class="fa fa-eraser"></i></button>
                         </div>
                     </div>
-                    <textarea id="input-json"></textarea>
+                    <textarea onkeydown="verifyTab(event)" id="input-json"></textarea>
                 </div>
 
                 <div class="arrow-container">
@@ -236,6 +236,17 @@
            localStorage.setItem(`stack`,JSON.stringify(aux));
         }
 
+        function verifyTab(e){
+            if(e && e.keyCode == 9){
+                e.preventDefault();
+                const position = inputJson.selectionStart;
+                const textBefore = inputJson.value.substring(0, position);
+                const textAfter = inputJson.value.substring(position, inputJson.value.length);
+                inputJson.value = `${textBefore}    ${textAfter}`;
+                inputJson.selectionStart = position + 4;
+                inputJson.selectionEnd = position + 4;
+            } 
+        }
 
         function setDemo(){
             inputJson.value = 
