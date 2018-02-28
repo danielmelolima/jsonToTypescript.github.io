@@ -159,4 +159,8 @@ textarea {
     .arrow-json{
         transform: rotate(90deg);
     }
+
+    .header-title {
+        font-size: 7vw;
+    }
 }
