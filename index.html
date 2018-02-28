@@ -1,212 +1,53 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free converter json to typecript">
+        <meta name="keywords" content="json, JSON, typecript,TYPESCRIPT, convert, to, json to typescript, convert json to typescript, from json, javascript to typescript">
+        <meta name="author" content="Daniel Lima">
+        <title>Json to Typescript | Daniel Lima</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     </head>
     <body>
         <div class="container">
             <header>
                 <div class="header-container">
                     <div class="header-logo">
-                        <h1 class="header-title">JSON to TYPESCRIPT</h1>
+                        <h1 class="header-title">JSON <i class="fa fa-chevron-circle-right"></i> TYPESCRIPT</h1>
                     </div>
                 </div>
             </header>
             <section>
                 <div class="textarea-container">
-                    <h2 class="label-textarea">JSON</h2>
-                    <textarea id="input-json">
-{
-    "autenticacaoAppResponse" : {
-        "codigo" : "0",
-        "numeroCpfCnpj" : "347475028",
-        "ordemCnpj" : "0",
-        "digitoCpfCnpj" : "31",
-        "documentos" : [ {
-        "codigoProduto" : "1",
-        "numeroDocumento" : "45|531|3241444|19"
-        }, {
-        "codigoProduto" : "1",
-        "numeroDocumento" : "12|531|807547|19"
-        } ],
-        "email" : "martinho_gf@hotmail.com",
-        "nome" : "Rodrigo de Castro Macena",
-        "codigoDispositivo" : "1",
-        "idSessao" : "eyJhbGciOiJSUzUxMiJ9.eyJ1aWQiOiIzNDc0NzUwMjgzMSIsInNlc3NlZ3B0bCI6Ijk3am5RbEgza1RkWDZNbEtXV0VmdzFoMmwrbWVTOWZ0NTdBRVwvVmlPQnpBbEdDS1NuYnlNWkV6QlYzS0VoXC9uT05wK1E3M1poXC94U3JNMlVBdTRhZkhBPT0iLCJwc3JvbGUiOltdLCJleHBQb3J0YWwiOjE1MTYyNzczMjQsImlzcyI6Imh0dHBzOlwvXC93d3dzLnBvcnRvc2VndXJvLmNvbS5iciIsImNuIjoiMzQ3NDc1MDI4MzEiLCJwb3J0YWwiOjgsImV4cCI6MTUxNjI3NjQyNH0.objLhY0sCFalIh6PdFqWJr74aUsA0uC58jczEGLxcVn6_1JBTvtH5qKBkvKQV_h9KQMYT9UZblbPTIjyDScL77DAMz6hV3d4anWzSOFq8xg-RbtJFPCQdWKlL-ZDvlDRRhWylecah0Pr7mmJ-F14GCM_mbq3mR7t20jUjsYeB8hmvR7RHioaxAO3fjSg0cShdcGLEC5rqGMc7v5LLZxeQA_RUcxGWx3_v5Lh56RQmn4yzq_TcAamvdh6IZawuL1qUVDDZM4iEjvE2hlhPh-tZ2TQW6AGPxyJ9cu1ADtce9PZPFKNC1kWXk1upQdGIk8-t6nx97Hr7lMwsxudYT6DPg",
-        "mensagem" : "mensagem de retorno quando ocorre sucesso na autenticação\nmessagem.ws.app.sucesso.autenticacao",
-        "listaApolicesResumidas" : {
-        "codigo" : "0",
-        "mensagem" : "Sucesso",
-        "listaApolicesResumidas" : {
-            "apoliceResumida" : [ {
-            "codigoConvenio" : 0,
-            "codigoEmpresa" : 1,
-            "codigoRamo" : 531,
-            "codigoStatusDocumento" : "A",
-            "codigoSucursal" : 45,
-            "descricaoStatusDocumento" : "ATIVA",
-            "documentosImpressao" : {
-                "documentoImpressao" : [ {
-                "caminhoDocumento" : "S5310450032414440000000000001920170329.PDF                  ",
-                "codigoGCDE" : "261761860",
-                "numeroItem" : 19,
-                "tipoDocumento" : 2
-                } ]
-            },
-            "fimVigenciaApolice" : "11/03/2018",
-            "inicioVigenciaApolice" : "11/03/2017",
-            "itens" : {
-                "item" : [ {
-                "codigoCategoriaTarifaria" : 10,
-                "descricaoCategoriaTarifaria" : "VEICULOS DE PASSEIO                     ",
-                "fimVigenciaItem" : "11/03/2018",
-                "inicioVigenciaItem" : "11/03/2017",
-                "numeroItem" : 19,
-                "numeroPropostaIndividual" : 807547,
-                "origemPropostaIndividual" : 12,
-                "veiculo" : {
-                    "anoFabricacaoVeiculo" : 2005,
-                    "anoModeloVeiculo" : 2006,
-                    "chassi" : "   935CHRFN06B505439",
-                    "classeLocalizacao" : "METROPOLITANA DE SAO PAULO                        ",
-                    "codigoClasseLocalizacao" : 11,
-                    "codigoVeiculo" : 80135,
-                    "descricaoTipoVeiculo" : "XSARA PICASSO                 ",
-                    "descricaoVeiculo" : "GLX 2.0 16V 138 CV            ",
-                    "marcaVeiculo" : "CITROEN        ",
-                    "modeloVeiculo" : "GLX 2.0 16V 138 CV            ",
-                    "placa" : "DSK1137",
-                    "tipoVeiculo" : 20
-                }
-                } ]
-            },
-            "numeroApolice" : 3241444,
-            "numeroEndosso" : 0,
-            "segurado" : {
-                "cpfCnpjSegurado" : "34747502831",
-                "dataNascimento" : "05/07/1985",
-                "enderecos" : {
-                "endereco" : [ {
-                    "bairro" : "VILA MEDEIROS       ",
-                    "cep" : "02207060",
-                    "cidade" : "SAO PAULO           ",
-                    "complemento" : "               ",
-                    "descricaoLogradouro" : "EILEM                                   ",
-                    "estado" : "SP",
-                    "numero" : "72",
-                    "tipoLogradouro" : "R    "
-                } ]
-                },
-                "nomeSegurado" : "RODRIGO DE CASTRO MACENA                          ",
-                "telefones" : {
-                "telefone" : [ {
-                    "codigoDdd" : 11,
-                    "codigoTipoTelefone" : 3,
-                    "descricaoTipoTelefone" : "RESIDENCIAL",
-                    "numeroTelefone" : "23097485"
-                }, {
-                    "codigoDdd" : 11,
-                    "codigoTipoTelefone" : 11,
-                    "descricaoTipoTelefone" : "CELULAR",
-                    "numeroTelefone" : "988887241"
-                } ]
-                },
-                "tipoPessoa" : "F"
-            }
-            }, {
-            "codigoConvenio" : 0,
-            "codigoEmpresa" : 1,
-            "codigoRamo" : 531,
-            "codigoStatusDocumento" : "A",
-            "codigoSucursal" : 45,
-            "descricaoStatusDocumento" : "ATIVA",
-            "documentosImpressao" : {
-                "documentoImpressao" : [ {
-                "caminhoDocumento" : "S5310450027784600000000000001920160330.PDF                  ",
-                "codigoGCDE" : "226084325",
-                "numeroItem" : 19,
-                "tipoDocumento" : 2
-                } ]
-            },
-            "fimVigenciaApolice" : "02/01/2017",
-            "inicioVigenciaApolice" : "02/01/2016",
-            "itens" : {
-                "item" : [ {
-                "codigoCategoriaTarifaria" : 10,
-                "descricaoCategoriaTarifaria" : "VEICULOS DE PASSEIO                     ",
-                "fimVigenciaItem" : "02/01/2017",
-                "inicioVigenciaItem" : "02/01/2016",
-                "numeroItem" : 19,
-                "numeroPropostaIndividual" : 26358299,
-                "origemPropostaIndividual" : 12,
-                "veiculo" : {
-                    "anoFabricacaoVeiculo" : 2005,
-                    "anoModeloVeiculo" : 2006,
-                    "chassi" : "   935CHRFN06B505439",
-                    "classeLocalizacao" : "METROPOLITANA DO RIO DE JANEIRO                   ",
-                    "codigoClasseLocalizacao" : 18,
-                    "codigoVeiculo" : 80135,
-                    "descricaoTipoVeiculo" : "XSARA PICASSO                 ",
-                    "descricaoVeiculo" : "GLX 2.0 16V 138 CV            ",
-                    "marcaVeiculo" : "CITROEN        ",
-                    "modeloVeiculo" : "GLX 2.0 16V 138 CV            ",
-                    "placa" : "DSK1137",
-                    "tipoVeiculo" : 20
-                }
-                } ]
-            },
-            "numeroApolice" : 2778460,
-            "numeroEndosso" : 0,
-            "segurado" : {
-                "cpfCnpjSegurado" : "34747502831",
-                "dataNascimento" : "05/07/1985",
-                "enderecos" : {
-                "endereco" : [ {
-                    "bairro" : "VILA MEDEIROS       ",
-                    "cep" : "02207060",
-                    "cidade" : "SAO PAULO           ",
-                    "complemento" : "               ",
-                    "descricaoLogradouro" : "EILEM                                   ",
-                    "estado" : "SP",
-                    "numero" : "72",
-                    "tipoLogradouro" : "R    "
-                } ]
-                },
-                "nomeSegurado" : "RODRIGO DE CASTRO MACENA                          ",
-                "telefones" : {
-                "telefone" : [ {
-                    "codigoDdd" : 11,
-                    "codigoTipoTelefone" : 3,
-                    "descricaoTipoTelefone" : "RESIDENCIAL",
-                    "numeroTelefone" : "23097485"
-                }, {
-                    "codigoDdd" : 11,
-                    "codigoTipoTelefone" : 11,
-                    "descricaoTipoTelefone" : "CELULAR",
-                    "numeroTelefone" : "988887241"
-                } ]
-                },
-                "tipoPessoa" : "F"
-            }
-            } ]
-        }
-        }
-    }
-    }
-                              
-                    </textarea>
+                    <div class="textarea-header-container">
+                        <h2 class="label-textarea">JSON</h2>
+                        <div>
+                            <button title="Demo" onclick="setDemo()" class="btn-action clipborad"><i class="fa fa-align-left"></i></button>
+                            <button title="Clear" onclick="clearInput()" class="btn-action clipborad"><i class="fa fa-eraser"></i></button>
+                        </div>
+                    </div>
+                    <textarea id="input-json"></textarea>
                 </div>
+
+                <div class="arrow-container">
+                    <i class="fa fa-arrow-right arrow-json"></i>
+                </div>
+
                 <div class="textarea-container">
                     <div class="textarea-header-container">
                         <h2 class="label-textarea">TYPESCRIPT</h2>
-                        <!-- <button class="clipborad">COPY</button> -->
+                        <button title="Copy" onclick="clipborad()" class="btn-action clipborad"><i class="fa fa-copy"></i></button>
                     </div>
                     <textarea readonly="readonly" id="input-ts"></textarea>
                 </div>
             </section>
+            <div class="container-submit">
+                <button class="btn-submit" onclick="transform();">Process</button>
+            </div>
             <footer>
-                <!-- <a class="footer-by" href="#">by Daniel Lima</a> -->
                 <div class="footer-container">
-                    <button class="btn-submit" onclick="transform();">Process</button>
+                    <a class="footer-by" href="#">© 2018 Daniel Lima</a>
                 </div>
             </footer>
         </div>
@@ -243,7 +84,7 @@
                 }
             }
 
-            inputTs.value = output;
+            inputTs.innerHTML = output;
         }
 
         function replaceObjectNames(output){
@@ -387,6 +228,48 @@
            })
            localStorage.setItem(`stack`,JSON.stringify(aux));
         }
-    
+
+
+        function setDemo(){
+            inputJson.value = 
+`{
+  "data": [{
+    "type": "articles",
+    "id": "1",
+    "attributes": {
+      "title": "JSON API paints my bikeshed!",
+      "body": "The shortest article. Ever.",
+      "created": "2015-05-22T14:56:29.000Z",
+      "updated": "2015-05-22T14:56:28.000Z"
+    },
+    "relationships": {
+      "author": {
+        "data": {"id": "42", "type": "people"}
+      }
+    }
+  }],
+  "included": [
+    {
+      "type": "people",
+      "id": "42",
+      "attributes": {
+        "name": "John",
+        "age": 80,
+        "gender": "male"
+      }
+    }
+  ]
+}`
+        }
+
+        function clearInput(){
+            inputJson.value = "";
+        }
+
+        function clipborad(){
+            inputTs.select();
+            document.execCommand("Copy");
+        }
+
     </script>
 </html>
