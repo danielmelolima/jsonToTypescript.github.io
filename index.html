@@ -150,6 +150,8 @@
                 case "object": {
                     if(attribute === null) return {type:"any",  optional: true};
 
+                    if(JSON.stringify(attribute) === JSON.stringify({})) return {type:"any",  optional: true};
+
                     if(isArray(attribute)){
                         if(attribute.length > 0){
                             let arrayType = getType(attribute[0], nameAttr);
