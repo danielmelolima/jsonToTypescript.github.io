@@ -121,6 +121,10 @@
             return `export interface ${nameAttr? setCamelCase(nameAttr) : 'MyObject'} {\n`;
         }
 
+        function validadeNameAttribute(name){
+            return name.replace(/[^a-zA-Z0-9]/g, "_");
+        }
+
         function setEndInterface(object){
            return "};\n\n";
         }
