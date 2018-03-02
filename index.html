@@ -71,13 +71,13 @@
                 return;
             }
             const json = JSON.parse(inputJson.value);
-            output += mapper(json);
+            output += mapper(json, true);
             
             while(true){
                 let stack = getObjectsStack();
                 if(stack){
                     stack.forEach((obj, index) => {
-                        output += mapper(obj.object, obj.name);
+                        output += mapper(obj.object, false, obj.name);
                         setNullObjectStack(index);
                     });
 
@@ -103,7 +103,11 @@
             return output
         }
 
-        function mapper(object, nameAttr){
+        function mapper(object, first, nameAttr){
+            if(first && Array.isArray(object)){
+                object = {"myObject2": object};
+            }
+
             let str = setInitialInterface(object, nameAttr);
             for(var propertyName in object) { 
                 let name = propertyName;
